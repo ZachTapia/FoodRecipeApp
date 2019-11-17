@@ -4,16 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".FindRecipeFragment">
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="This is the Find Recipe Fragment" />
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/find_recipe_title_text"
+            android:textColor="@color/main_orange"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.148"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036" />
 
-    </FrameLayout>
+        <EditText
+            android:id="@+id/find_recipe_text_box"
+            android:layout_width="382dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/find_recipe_text_box_hint"
+            android:inputType="textPersonName"
+            android:textColor="@color/main_olive"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.014" />
+
+
+        <TextView
+            android:id="@+id/find_recipe_general"
+            android:layout_width="382dp"
+            android:layout_height="181dp"
+            android:text="@string/find_recipe_general_paragraph"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/main_olive"
+            android:textSize="34sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.448"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/find_recipe_button"
+            app:layout_constraintVertical_bias="0.076" />
+
+        <Button
+            android:id="@+id/find_recipe_button"
+            android:layout_width="119dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/background"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/find_recipe_button_text"
+            android:textColor="@color/main_olive"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/find_recipe_text_box"
+            app:layout_constraintVertical_bias="0.021" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </layout>

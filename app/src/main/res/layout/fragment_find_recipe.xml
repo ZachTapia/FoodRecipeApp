@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".FindRecipeFragment">
+    tools:context="com.example.android.navigation.FindRecipeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -45,8 +45,8 @@
 
         <TextView
             android:id="@+id/find_recipe_general"
-            android:layout_width="382dp"
-            android:layout_height="181dp"
+            android:layout_width="337dp"
+            android:layout_height="179dp"
             android:text="@string/find_recipe_general_paragraph"
             android:textAlignment="textStart"
             android:textAllCaps="false"
@@ -57,11 +57,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.448"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/find_recipe_button"
-            app:layout_constraintVertical_bias="0.076" />
+            app:layout_constraintTop_toBottomOf="@+id/logout_button"
+            app:layout_constraintVertical_bias="0.113" />
 
         <Button
-            android:id="@+id/find_recipe_button"
+            android:id="@+id/logout_button"
             android:layout_width="119dp"
             android:layout_height="46dp"
             android:layout_marginStart="16dp"
@@ -75,6 +75,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/find_recipe_text_box"
             app:layout_constraintVertical_bias="0.021" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

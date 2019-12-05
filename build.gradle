@@ -19,6 +19,7 @@ buildscript {
         // in the individual module build.gradle files
         // Adding the safe-args dependency to the project Gradle file
         classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+        classpath 'com.google.gms:google-services:4.3.2'
     }
 }
 

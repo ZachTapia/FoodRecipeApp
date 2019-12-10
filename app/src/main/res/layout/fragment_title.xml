@@ -52,6 +52,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_title_text_view" />
 
+        <Button
+            android:id="@+id/addRecipe"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:text="@string/add_recipe"
+            android:background="#D5FFFBE6"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/main_olive"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/to_find_recipe_button" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

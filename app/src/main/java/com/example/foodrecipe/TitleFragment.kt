@@ -99,16 +99,21 @@ class TitleFragment : Fragment() {
         viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticationState ->
             when (authenticationState) {
                 LoginViewModel.AuthenticationState.AUTHENTICATED -> {
-                    binding.loginButton.setVisibility(View.INVISIBLE)
-                    binding.toFindRecipeButton.setVisibility(View.VISIBLE)
+                    binding.loginButton.visibility = View.INVISIBLE
+                    binding.toFindRecipeButton.visibility = View.VISIBLE
                     binding.toFindRecipeButton.setOnClickListener {view : View ->
                         view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToFindRecipeFragment())
+                    }
+                    binding.addRecipe.visibility = View.VISIBLE
+                    binding.addRecipe.setOnClickListener { view: View ->
+                        view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToAddRecipeFragment())
                     }
 
                 }
                 else -> {
-                    binding.loginButton.setVisibility(View.VISIBLE)
-                    binding.toFindRecipeButton.setVisibility(View.INVISIBLE)
+                    binding.loginButton.visibility = View.VISIBLE
+                    binding.addRecipe.visibility = View.INVISIBLE
+                    binding.toFindRecipeButton.visibility = View.INVISIBLE
                     binding.loginButton.setOnClickListener { launchSignInFlow() }
                 }
             }

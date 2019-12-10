@@ -6,18 +6,49 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ListView
 import androidx.databinding.DataBindingUtil
 import com.example.foodrecipe.databinding.FragmentFindRecipeBinding
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.fragment_find_recipe.view.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class FindRecipeFragment : Fragment() {
 
+    private lateinit var  ref : DatabaseReference
+    private lateinit var  recipeList : MutableList<Recipe>
+    private lateinit var binding : FragmentFindRecipeBinding
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         // Inflate the layout for this fragment
-        val binding = DataBindingUtil.inflate<FragmentFindRecipeBinding>(inflater, R.layout.fragment_find_recipe, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_find_recipe, container, false)
+
+        recipeList = mutableListOf()
+
+        ref.addValueEventListener(object: ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+                if(p0.exists()){
+                    recipeList.clear()
+                    for (i in p0.children){
+                        val recipe = i.getValue(Recipe :: class.java)
+                        recipeList.add(recipe!!)
+                    }
+
+
+                }
+            }
+
+        })
 
 
 

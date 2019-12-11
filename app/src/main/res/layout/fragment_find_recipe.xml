@@ -81,10 +81,11 @@
             android:layout_width="369dp"
             android:layout_height="501dp"
             android:layout_marginTop="16dp"
-            android:visibility="invisible"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logout_button" />
+            app:layout_constraintTop_toBottomOf="@+id/logout_button"></androidx.recyclerview.widget.RecyclerView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

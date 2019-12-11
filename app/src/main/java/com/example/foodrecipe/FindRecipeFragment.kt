@@ -9,10 +9,7 @@ import android.view.ViewGroup
 import android.widget.ListView
 import androidx.databinding.DataBindingUtil
 import com.example.foodrecipe.databinding.FragmentFindRecipeBinding
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_find_recipe.view.*
 
 /**
@@ -29,7 +26,13 @@ class FindRecipeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_find_recipe, container, false)
 
+        ref = FirebaseDatabase.getInstance().getReference("recipes")
+
         recipeList = mutableListOf()
+
+
+
+
 
         ref.addValueEventListener(object: ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
@@ -43,7 +46,9 @@ class FindRecipeFragment : Fragment() {
                         val recipe = i.getValue(Recipe :: class.java)
                         recipeList.add(recipe!!)
                     }
+                    val adapter = RecipeAdapter(recipeList)
 
+                    binding.listView.adapter = adapter
 
                 }
             }
@@ -53,6 +58,10 @@ class FindRecipeFragment : Fragment() {
 
 
         return binding.root
+    }
+
+    fun displayComment(){
+
     }
 
 

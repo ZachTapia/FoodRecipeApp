@@ -47,6 +47,7 @@ class RecipeRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             recipeAuthor.setText(recipePost.authorName)
             recipeRating.setText(recipePost.recipeRating)
 
+
             //Bind images using glide
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
@@ -58,5 +59,6 @@ class RecipeRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 .into(recipeImage)
         }
     }
+
 
 }

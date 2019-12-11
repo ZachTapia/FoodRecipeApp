@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/findRecipeFragment"
         android:name="com.example.foodrecipe.FindRecipeFragment"
-        android:label="Search"
+        android:label="Browse"
         tools:layout="@layout/fragment_find_recipe" />
     <fragment
         android:id="@+id/settingFragment"

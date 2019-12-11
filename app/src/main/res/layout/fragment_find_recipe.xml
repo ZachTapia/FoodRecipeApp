@@ -35,71 +35,72 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.036" />
 
-                <EditText
-                    android:id="@+id/find_recipe_text_box"
-                    android:layout_width="382dp"
-                    android:layout_height="74dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginEnd="16dp"
-                    android:ems="10"
-                    android:hint="@string/find_recipe_text_box_hint"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/main_olive"
-                    android:textColorHint="#48726767"
-                    android:textSize="28sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.126"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView"
-                    app:layout_constraintVertical_bias="0.014" />
+<!--                <EditText-->
+<!--                    android:id="@+id/find_recipe_text_box"-->
+<!--                    android:layout_width="382dp"-->
+<!--                    android:layout_height="74dp"-->
+<!--                    android:layout_marginStart="0dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:ems="10"-->
+<!--                    android:hint="@string/find_recipe_text_box_hint"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    android:textColor="@color/main_olive"-->
+<!--                    android:textColorHint="#48726767"-->
+<!--                    android:textSize="28sp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.126"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView"-->
+<!--                    app:layout_constraintVertical_bias="0.014" />-->
 
 
-                <TextView
-                    android:id="@+id/find_recipe_general"
-                    android:layout_width="337dp"
-                    android:layout_height="179dp"
-                    android:text="@string/find_recipe_general_paragraph"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="false"
-                    android:textColor="@color/main_olive"
-                    android:textSize="34sp"
-                    android:textStyle="italic"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.448"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/logout_button"
-                    app:layout_constraintVertical_bias="0.113" />
+        <!--                <Button-->
+<!--                    android:id="@+id/logout_button"-->
+<!--                    android:layout_width="119dp"-->
+<!--                    android:layout_height="46dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginBottom="12dp"-->
+<!--                    android:background="@color/background"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:text="@string/find_recipe_button_text"-->
+<!--                    android:textColor="@color/main_olive"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/find_recipe_text_box"-->
+<!--                    app:layout_constraintVertical_bias="0.021" />-->
 
-                <Button
-                    android:id="@+id/logout_button"
-                    android:layout_width="119dp"
-                    android:layout_height="46dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="12dp"
-                    android:background="@color/background"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/find_recipe_button_text"
-                    android:textColor="@color/main_olive"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/find_recipe_text_box"
-                    app:layout_constraintVertical_bias="0.021" />
+        <TextView
+            android:id="@+id/find_recipe_general"
+            android:layout_width="342dp"
+            android:layout_height="97dp"
+            android:text="@string/find_recipe_general_paragraph"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/main_olive"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.032" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/find_recipe_general" >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/find_recipe_general"
+            app:layout_constraintVertical_bias="0.178">
 
-                </androidx.recyclerview.widget.RecyclerView>
-            </LinearLayout>
+        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
 
 
         </ScrollView>

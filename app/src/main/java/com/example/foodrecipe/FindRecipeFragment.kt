@@ -1,5 +1,10 @@
 package com.example.foodrecipe
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,9 +12,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+<<<<<<< HEAD
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodrecipe.databinding.FragmentFindRecipeBinding
 import com.google.firebase.database.*
+=======
+import com.example.foodrecipe.databinding.FragmentFindRecipeBinding
+>>>>>>> master
 import kotlinx.android.synthetic.main.fragment_find_recipe.*
 
 /**
@@ -17,6 +26,7 @@ import kotlinx.android.synthetic.main.fragment_find_recipe.*
  */
 class FindRecipeFragment : Fragment() {
 
+<<<<<<< HEAD
     private lateinit var recipeAdapter: RecipeAdapter
     private lateinit var  ref : DatabaseReference
     private lateinit var  recipeList : MutableList<Recipe>
@@ -29,8 +39,31 @@ class FindRecipeFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_find_recipe, container, false)
 
         recyclerView = binding.listView
+=======
+    private lateinit var recipeAdapter: RecipeRecyclerAdapter
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        val binding = DataBindingUtil.inflate<FragmentFindRecipeBinding>(inflater, R.layout.fragment_find_recipe, container, false)
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        recycler_view.apply {
+            layoutManager = LinearLayoutManager(activity)
+            val topSpacingItemDecoration = TopSpacingItemDecoration(30)
+            addItemDecoration(topSpacingItemDecoration)
+            recipeAdapter = RecipeRecyclerAdapter()
+            adapter = recipeAdapter
+        }
+
+
+        val data = DataSource.createDataSet()
+        recipeAdapter.submitList(data)
+>>>>>>> master
+
     }
 
     override fun onResume() {
@@ -40,6 +73,7 @@ class FindRecipeFragment : Fragment() {
 
         ref = FirebaseDatabase.getInstance().getReference("recipes")
 
+<<<<<<< HEAD
 
         ref.addValueEventListener(object: ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
@@ -69,3 +103,7 @@ class FindRecipeFragment : Fragment() {
 
     }
 }
+=======
+}
+
+>>>>>>> master

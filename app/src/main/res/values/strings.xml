@@ -20,10 +20,11 @@
     <string name="login">Login</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="main_title_text">Local Tastes</string>
-    <string name="to_find_recipe_button_text">Find a Recipe</string>
-    <string name="find_recipe_title_text">Find a Recipe</string>
+    <string name="to_find_recipe_button_text">Browse Recipes</string>
+    <string name="find_recipe_title_text">Browse Recipes</string>
     <string name="find_recipe_text_box_hint">Cinnamon Pumpkin Waffles</string>
     <string name="find_recipe_button_text">Find Recipes</string>
+<<<<<<< HEAD
     <string name="find_recipe_general_paragraph">Here you can search a curated list of the top rated, local favorite recipes near you</string>
     <string name="add_recipe">Add Recipe</string>
     <string name="name_hint">Enter a Recipe Name</string>
@@ -31,4 +32,7 @@
     <string name="directions_hint">Enter the directions here</string>
     <string name="submit_recipe_button">Submit</string>
     <string name="image_url">Enter a Image URL Here</string>
+=======
+    <string name="find_recipe_general_paragraph">Here you can browse a curated list of the top rated, local favorite recipes near you</string>
+>>>>>>> master
 </resources>

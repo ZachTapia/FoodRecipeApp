@@ -22,12 +22,17 @@
     <fragment
         android:id="@+id/findRecipeFragment"
         android:name="com.example.foodrecipe.FindRecipeFragment"
+<<<<<<< HEAD
         android:label="Search"
         tools:layout="@layout/fragment_find_recipe" >
         <action
             android:id="@+id/action_findRecipeFragment_to_viewRecipeFragment"
             app:destination="@id/viewRecipeFragment" />
     </fragment>
+=======
+        android:label="Browse"
+        tools:layout="@layout/fragment_find_recipe" />
+>>>>>>> master
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.example.foodrecipe.SettingFragment"

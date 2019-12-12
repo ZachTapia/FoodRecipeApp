@@ -12,7 +12,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.foodrecipe"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -57,9 +57,21 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:17.2.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+
     // Card View
     def cardview_version = "1.0.0"
     implementation "androidx.cardview:cardview:$cardview_version"
+
+    // Recyclerview
+    def recyclerview_version = '1.1.0'
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+
+    //glide
+    def glide_version = "4.8.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 
 }
 

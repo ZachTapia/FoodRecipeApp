@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 
 import kotlinx.android.synthetic.main.text_item_view.view.*
@@ -35,7 +37,7 @@ class RecipeAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class RecipeViewHolder constructor(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         val recipeTitle = itemView.recipe_title
-        //val recipeImage = itemView.recipe_image
+        val recipeImage = itemView.recipe_image
         val recipeAuthor = itemView.recipe_author
         val recipeRating = itemView.recipe_rating
 
@@ -47,14 +49,14 @@ class RecipeAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
             //Bind images using glide
-            /*val requestOptions = RequestOptions()
+            val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
                 .load(recipePost.imageURL)
-                .into(recipeImage)*/
+                .into(recipeImage)
         }
     }
 

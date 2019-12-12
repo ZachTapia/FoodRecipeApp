@@ -6,73 +6,92 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
-        <EditText
-            android:id="@+id/recipe_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/name_hint"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/image_url"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.161"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.94" />
-
-        <EditText
-            android:id="@+id/ingredients_list"
-            android:layout_width="223dp"
-            android:layout_height="161dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="@string/ingredients_hint"
-            android:inputType="textMultiLine"
-            app:layout_constraintBottom_toTopOf="@+id/directions"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.186"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/directions"
-            android:layout_width="342dp"
-            android:layout_height="249dp"
-            android:layout_marginBottom="28dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="@string/directions_hint"
-            android:inputType="textMultiLine"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/submit_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
-            android:text="@string/submit_recipe_button"
-            app:layout_constraintBottom_toTopOf="@+id/directions"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.529"
-            app:layout_constraintStart_toEndOf="@+id/ingredients_list"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/image_url"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:ems="10"
-            android:hint="@string/image_url"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/ingredients_list"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.161"
-            app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/add_recipe"
+                    android:textColor="@color/main_orange"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.148"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.036" />
+
+                <EditText
+                    android:id="@+id/recipe_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="@string/name_hint"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/ingredients_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/listPreferredItemHeightLarge"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="start|top"
+                    android:hint="@string/ingredients_hint"
+                    android:inputType="textMultiLine" />
+
+                <EditText
+                    android:id="@+id/directions"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/listPreferredItemHeightLarge"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="start|top"
+                    android:hint="@string/directions_hint"
+                    android:inputType="textMultiLine" />
+
+                <EditText
+                    android:id="@+id/image_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="@string/image_url"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/submit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:background="@color/main_olive"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/submit_recipe_button"
+                    android:textColor="#D5FFFBE6" />
+
+            </LinearLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

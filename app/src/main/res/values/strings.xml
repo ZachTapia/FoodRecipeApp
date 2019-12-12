@@ -30,4 +30,5 @@
     <string name="ingredients_hint">Enter the Ingredients needed here</string>
     <string name="directions_hint">Enter the directions here</string>
     <string name="submit_recipe_button">Submit</string>
+    <string name="image_url">Enter a Image URL Here</string>
 </resources>

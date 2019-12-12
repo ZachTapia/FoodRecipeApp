@@ -1,37 +1,44 @@
 package com.example.foodrecipe
 
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListView
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.foodrecipe.databinding.FragmentFindRecipeBinding
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_find_recipe.view.*
+import kotlinx.android.synthetic.main.fragment_find_recipe.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class FindRecipeFragment : Fragment() {
 
+    private lateinit var recipeAdapter: RecipeAdapter
     private lateinit var  ref : DatabaseReference
     private lateinit var  recipeList : MutableList<Recipe>
+    private lateinit var recyclerView: RecyclerView
     private lateinit var binding : FragmentFindRecipeBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_find_recipe, container, false)
 
-        ref = FirebaseDatabase.getInstance().getReference("recipes")
+        recyclerView = binding.listView
+
+        return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         recipeList = mutableListOf()
 
-
-
+        ref = FirebaseDatabase.getInstance().getReference("recipes")
 
 
         ref.addValueEventListener(object: ValueEventListener {
@@ -46,23 +53,19 @@ class FindRecipeFragment : Fragment() {
                         val recipe = i.getValue(Recipe :: class.java)
                         recipeList.add(recipe!!)
                     }
-                    val adapter = RecipeAdapter(recipeList)
-
-                    binding.listView.adapter = adapter
+                    list_view.apply {
+                        layoutManager = LinearLayoutManager(activity)
+                        val topSpacingItemDecoration = TopSpacingItemDecoration(30)
+                        addItemDecoration(topSpacingItemDecoration)
+                        recipeAdapter = RecipeAdapter()
+                        adapter = recipeAdapter
+                    }
+                    recipeAdapter.submitList(recipeList)
 
                 }
             }
 
         })
 
-
-
-        return binding.root
     }
-
-    fun displayComment(){
-
-    }
-
-
 }

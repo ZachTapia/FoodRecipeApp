@@ -15,31 +15,30 @@
             android:ems="10"
             android:hint="@string/name_hint"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/ingredients_list"
+            app:layout_constraintBottom_toTopOf="@+id/image_url"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.161"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.745" />
+            app:layout_constraintVertical_bias="0.94" />
 
         <EditText
             android:id="@+id/ingredients_list"
             android:layout_width="223dp"
             android:layout_height="161dp"
-            android:layout_marginBottom="28dp"
             android:ems="10"
             android:gravity="start|top"
             android:hint="@string/ingredients_hint"
             android:inputType="textMultiLine"
             app:layout_constraintBottom_toTopOf="@+id/directions"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/directions"
-            android:layout_width="341dp"
-            android:layout_height="305dp"
+            android:layout_width="342dp"
+            android:layout_height="249dp"
             android:layout_marginBottom="28dp"
             android:ems="10"
             android:gravity="start|top"
@@ -61,6 +60,19 @@
             app:layout_constraintStart_toEndOf="@+id/ingredients_list"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/image_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:ems="10"
+            android:hint="@string/image_url"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/ingredients_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

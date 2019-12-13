@@ -13,19 +13,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/background">
 
                 <TextView
                     android:id="@+id/recipeName"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/montserrat"
@@ -91,6 +91,19 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recipeName"
                     app:layout_constraintVertical_bias="1.0" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/watch_video_button"
+                    android:background="@color/main_olive"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="#D5FFFBE6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Directions" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

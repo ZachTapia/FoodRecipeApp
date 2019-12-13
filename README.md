@@ -1,5 +1,15 @@
-# CS 4540 Final Group Project
-## Food Recipe App
+# Local Tastes
+## Local Tastes is our CS 4540 Final Project! Local Tastes can be thought of as an Instagram-like food recipe sharing app.
+
+## Functionalities: 
+
+- Users register before accessing app, users then must login.
+- Users may view a 'feed' that they can browse and view local favorite recipes.
+- Users may add their very own recipe to the feed so that others users may view.
+
+## Technical Implementations:
+- Local Tastes uses a RecyclerView as the 'feed' which holds all recipes. This keeps the user experience smooth as 'cards' that are not visible to the user are then reassigned to incoming 'cards'. Our RecyclerView also makes use of 'Item Decorations' within the RecyclerView, which gives our cards a custom look and feel.
+
 
 
 

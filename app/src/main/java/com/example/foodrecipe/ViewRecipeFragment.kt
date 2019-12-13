@@ -44,7 +44,7 @@ class ViewRecipeFragment : Fragment() {
                 if(p0.exists()){
                     var data = p0.child("-LvvRsN1rp8rdyWHMrZj").getValue(Recipe :: class.java)
                     binding.recipeName.text = data!!.name
-                    binding.Directions.text = "Direction:\n" +data!!.direction
+                    binding.Directions.text = "Directions:\n" +data!!.direction
                     binding.ingredientsList.text = "Ingredients:\n" + data!!.ingredients
                     binding.authorName.text = "By: "+data!!.author
                 }

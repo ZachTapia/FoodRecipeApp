@@ -6,12 +6,12 @@
 - Users register before accessing app, users then must login.
 - Users may view a 'feed' that they can browse and view local favorite recipes.
 - Users may add their very own recipe to the feed so that others users may view.
-- Users may view video to aid in creation of recipe.
+- Users may view a YouTube video to aid in creation of recipe.
 
 ## Technical Implementations:
 - Local Tastes uses a RecyclerView as the 'feed' which holds all recipes. This keeps the user experience smooth as 'cards' that are not visible to the user are then reassigned to incoming 'cards'. Our RecyclerView also makes use of 'Item Decorations' within the RecyclerView, which gives our cards a custom look and feel.
 - Users first login using either their own personal email or using GMail Login.
-- Each recipe includes a link to a video instruction.
+- Each recipe includes a YouTube link to a video instruction using the YouTube Android Player API.
 
 
 

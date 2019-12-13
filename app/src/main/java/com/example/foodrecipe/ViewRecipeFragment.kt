@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.fragment.app.viewModels
@@ -16,6 +17,7 @@ import com.example.foodrecipe.databinding.FragmentViewRecipeBinding
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_find_recipe.*
+import com.google.android.youtube.player.YouTubeStandalonePlayer
 
 /**
  * A simple [Fragment] subclass.
@@ -47,6 +49,11 @@ class ViewRecipeFragment : Fragment() {
                     binding.Directions.text = "Directions:\n" +data!!.direction
                     binding.ingredientsList.text = "Ingredients:\n" + data!!.ingredients
                     binding.authorName.text = "By: "+data!!.author
+                    binding.button.setOnClickListener {
+                        val intent = YouTubeStandalonePlayer.createVideoIntent(activity, "XXXX", "YxVZuuxxXxk", 0, true, true);
+                        startActivity(intent);
+                    }
+
                 }
             }
 

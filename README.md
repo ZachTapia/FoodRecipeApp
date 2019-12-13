@@ -15,8 +15,17 @@
 
 
 ## Screenshots:
-### Title Screen
-![Title Screenshot](https://user-images.githubusercontent.com/31228341/69014902-aee62a80-0943-11ea-8a11-0aae04d050f5.png)
+### Welcome Screen Before User Login
+![Before Login](https://user-images.githubusercontent.com/31228341/70765564-03e14a80-1d10-11ea-93d6-5e0fdc26b7b7.png)
+
+### During Login Screen
+![During Login Screen](https://user-images.githubusercontent.com/31228341/70765607-19ef0b00-1d10-11ea-858c-e9bc318b454d.png)
+
+### User Logged In 
+![User Logged in](https://user-images.githubusercontent.com/31228341/70765627-270bfa00-1d10-11ea-9846-4829ee73dbb5.png)
 
 ### Find Recipe Screen
-![Find Recipe Screenshot](https://user-images.githubusercontent.com/31228341/69014921-c58c8180-0943-11ea-89f7-bf4047d366c1.png)
+![Find Recipe Screenshot](https://user-images.githubusercontent.com/31228341/70765650-3723d980-1d10-11ea-99cb-f1807c11b01b.png)
+
+### User Add a Recipe Screen
+![User Add a Recipe](https://user-images.githubusercontent.com/31228341/70765670-46a32280-1d10-11ea-87ef-6d178526d210.png)

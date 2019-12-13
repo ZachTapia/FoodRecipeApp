@@ -3,6 +3,7 @@ package com.example.foodrecipe
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -57,6 +58,11 @@ class RecipeAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 .applyDefaultRequestOptions(requestOptions)
                 .load(recipePost.imageURL)
                 .into(recipeImage)
+
+            itemView.setOnClickListener{view: View ->
+
+                view.findNavController().navigate(FindRecipeFragmentDirections.actionFindRecipeFragmentToViewRecipeFragment())
+            }
         }
     }
 

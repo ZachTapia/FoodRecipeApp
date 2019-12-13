@@ -32,4 +32,4 @@
 ![Find Recipe Screenshot](https://user-images.githubusercontent.com/31228341/70765650-3723d980-1d10-11ea-99cb-f1807c11b01b.png)
 
 ### User Add a Recipe Screen
-![User Add a Recipe](https://user-images.githubusercontent.com/31228341/70765670-46a32280-1d10-11ea-87ef-6d178526d210.png)
+![User Add a Recipe](https://user-images.githubusercontent.com/31228341/70818594-f61bdb80-1d88-11ea-8e36-55f69aba5583.png)

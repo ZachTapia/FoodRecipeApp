@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,11 +22,17 @@
 
                 <TextView
                     android:id="@+id/recipeName"
-                    android:layout_width="296dp"
+                    android:layout_width="match_parent"
                     android:layout_height="47dp"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:textAlignment="center"
-                    android:textSize="30sp"
+                    android:textColor="@color/main_orange"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/author_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
@@ -33,33 +40,58 @@
 
                 <TextView
                     android:id="@+id/ingredientsList"
-                    android:layout_width="149dp"
-                    android:layout_height="182dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toTopOf="@+id/Directions"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/author_name" />
 
                 <TextView
                     android:id="@+id/Directions"
-                    android:layout_width="348dp"
-                    android:layout_height="314dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.492"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ingredientsList" />
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsList"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:id="@+id/author_name"
-                    android:layout_width="271dp"
+                    android:layout_width="match_parent"
                     android:layout_height="37dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:textAlignment="center"
-                    android:textSize="18sp"
+                    android:textColor="@color/main_olive"
+                    android:textSize="24sp"
                     app:layout_constraintBottom_toTopOf="@+id/ingredientsList"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recipeName"
                     app:layout_constraintVertical_bias="1.0" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

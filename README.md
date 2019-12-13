@@ -10,7 +10,9 @@
 
 ## Technical Implementations:
 - Local Tastes uses a RecyclerView as the 'feed' which holds all recipes. This keeps the user experience smooth as 'cards' that are not visible to the user are then reassigned to incoming 'cards'. Our RecyclerView also makes use of 'Item Decorations' within the RecyclerView, which gives our cards a custom look and feel.
+- Information is stored in a Firebase Livedata Database to write and retrieve information.
 - Users first login using either their own personal email or using GMail Login.
+- User Authentication is stored and accesed through Firebase Authentication which allows users to create an account and access it.
 - Each recipe includes a YouTube link to a video instruction using the YouTube Android Player API.
 
 
